@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Khảo sát </title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="exam.css">
+</head>
+<body>
+    <div class="main">
+        <form class="form" action="">
+            <!-- question will be add here -->
+        </form>
+    </div>
+</body>
+<script>
+    data = [
+        {
+            type: 1, // dung sai
+            question: 'Câu này là đúng hay sai ?',
+            answerA: 'Đúng',
+            answerB: 'Sai'
+        },
+        {
+            type: 2, // radio
+            question: 'Đáp án nào là đúng ?',
+            answerA: 'Đáp án B',
+            answerB: 'Đáp án A',
+            answerC: 'Đáp án A và B',
+            answerD: 'Không đáp án nào đúng'
+        },
+        {
+            type: 3, // checkbox
+            question: 'Những đáp án nào là đúng ?',
+            answerA: 'Đáp án B',
+            answerB: 'Đáp án A',
+            answerC: 'Đáp án A và B',
+            answerD: 'Không đáp án nào đúng'
+        },
+        {
+            type: 4, // input
+            question: 'Nhập một câu bạn cho là đúng ?',
+        }
+    ]
+
+    var testElement = document.querySelector('.form')
+    questionList = '<h1> Khảo sát 40 câu </h1>'
+
+    for (let i = 1; i <= 10; ++i) {
+        questionList += `
+                <div class="question">
+                    <h3> Cau ${i}: ${data[0].question} </h3>
+                    <div class="answer">
+                        <span> <input type="radio" name="trueFalseQues-${i}"> ${data[0].answerA} </input> </span>
+                        <span> <input type="radio" name="trueFalseQues-${i}"> ${data[0].answerB} </input> </span>
+                    </div>
+                </div>
+            `
+    }
+
+    for (let i = 11; i <= 20; ++i) {
+        questionList += `
+                <div class="question">
+                    <h3> Cau ${i}: ${data[1].question} </h3>
+                    <div class="answer">
+                        <span> <input type="radio" name="radioQues-${i}"> ${data[1].answerA} </input> </span>
+                        <span> <input type="radio" name="radioQues-${i}"> ${data[1].answerB} </input> </span>
+                        <span> <input type="radio" name="radioQues-${i}"> ${data[1].answerC} </input> </span>
+                        <span> <input type="radio" name="radioQues-${i}"> ${data[1].answerD} </input> </span>
+                    </div>
+                </div>
+            `
+    }
+
+    for (let i = 21; i <= 30; ++i) {
+        questionList += `
+                <div class="question">
+                    <h3> Cau ${i}: ${data[2].question} </h3>
+                    <div class="answer">
+                        <span> <input type="checkbox"> ${data[2].answerA} </input> </span>
+                        <span> <input type="checkbox"> ${data[2].answerB} </input> </span>
+                        <span> <input type="checkbox"> ${data[2].answerC} </input> </span>
+                        <span> <input type="checkbox"> ${data[2].answerD} </input> </span>
+                    </div>
+                </div>
+            `
+    }
+
+    for (let i = 31; i <= 40; ++i) {
+        questionList += `
+                <div class="question">
+                    <h3> Cau ${i}: ${data[3].question} </h3>      
+                        <textarea rows="2" style="width: 100%; resize: none"> </textarea>
+                </div>
+            `
+    }
+
+    testElement.innerHTML = questionList
+    const btnSubmit = document.createElement('button')
+    btnSubmit.innerText = 'Nộp bài'
+    btnSubmit.classList.add('form-submit')
+    btnSubmit.addEventListener('click', (e) => {
+        e.preventDefault()
+        window.location.href = 'result.html'
+    }) 
+    testElement.appendChild(btnSubmit)
+
+</script>
+</html>

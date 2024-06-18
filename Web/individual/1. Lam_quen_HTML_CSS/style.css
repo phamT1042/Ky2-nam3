@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: gray
+}
+
+p {
+    display: inline-block;
+}
+
+.title {
+    text-align: center;
+    background-color: orange;
+}
+
+.form {
+    max-width: 610px;
+    padding: 16px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+@media (max-width: 630px) {
+    .form {
+        max-width: none;
+    }
+}
+
+.form_row {
+    padding: 8px;
+    display: flex;
+}
+
+.form_row2 {
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form_label {
+    font-weight: bold;
+    min-width: 96px;
+    display: inline-block;
+}
+
+img {
+    padding: 5px;
+    width: 80px;
+}
+
+
+

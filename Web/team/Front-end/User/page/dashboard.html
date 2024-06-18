@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <title>Trang chủ</title>
+</head>
+
+<body>
+    <div class="nav">
+        <img src="../image/logo_ptit.png" id="logo" style="height: 42px;">
+        <ul class="nav-list">
+            <li class="nav-item"> <a href="./profile.html"> Hồ sơ </a> </li>
+            <li class="nav-item"> <a href="./history.html"> Lịch sử </a> </li>
+            <li class="nav-item"> <a href="../index.html"> Đăng xuất </a> </li>
+        </ul>
+    </div>
+
+    <div class="search-container">
+        <input type="text" class="search-input" id="searchInput" placeholder="Tìm kiếm...">
+        <button class="search-button" onclick="showResults()">Tìm Kiếm</button>
+    </div>
+
+    <table class="table" id="exam_table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Tên Bài Thi</th>
+                <th>
+                    Lớp
+                    <div class="filterdown" id="filterClass">
+                        <button class="filterbtn" onclick="toggleFilterDropdown('Class')">
+                            <div class="filter-icon">
+                                <img src="../image/filter.jpg" style="width: 20px; height: 20px;">
+                            </div>
+                        </button>
+                        <div class="filter-dropdown-content" id="filterDropdownClass">
+                            <!-- Thêm các item trong danh sách -->
+                            <a href="#">CNXHKH01</a>
+                            <a href="#">CSDL01</a>
+                        </div>
+                    </div>
+                </th>
+                <th>Mức Độ
+                    <div class="filterdown" id="filterLevel">
+                        <button class="filterbtn" onclick="toggleFilterDropdown('Level')">
+                            <div class="filter-icon">
+                                <img src="../image/filter.jpg" style="width: 20px; height: 20px;">
+                            </div>
+                        </button>
+                        <div class="filter-dropdown-content" id="filterDropdownLevel">
+                            <!-- Thêm các item trong danh sách -->
+                            <a href="#">Dễ</a>
+                            <a href="#">Trung Bình</a>
+                            <a href="#">Khó</a>
+                        </div>
+                    </div>
+                </th>
+                <th>Trạng Thái
+                    <div class="filterdown" id="filterState">
+                        <button class="filterbtn" onclick="toggleFilterDropdown('State')">
+                            <div class="filter-icon">
+                                <img src="../image/filter.jpg" style="width: 20px; height: 20px;">
+                            </div>
+                        </button>
+                        <div class="filter-dropdown-content" id="filterDropdownState">
+                            <!-- Thêm các item trong danh sách -->
+                            <a href="#">Tự Do</a>
+                            <a href="#">Hết hạn làm bài</a>
+                            <a href="#">Đang diễn ra</a>
+                            <a href="#">Sắp diễn ra</a>
+                        </div>
+                    </div>
+                </th>
+                <th>Kỳ Thi
+                    <div class="filterdown" id="filterExam">
+                        <button class="filterbtn" onclick="toggleFilterDropdown('Exam')">
+                            <div class="filter-icon">
+                                <img src="../image/filter.jpg" style="width: 20px; height: 20px;">
+                            </div>
+                        </button>
+                        <div class="filter-dropdown-content" id="filterDropdownExam">
+                            <!-- Thêm các item trong danh sách -->
+                            <a href="#">Luyện Tập</a>
+                            <a href="#">Giữa Kỳ</a>
+                            <a href="#">Cuối Kỳ</a>
+                        </div>
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>cnxhkh01</td>
+                <td>Bài kiểm tra số 1</td>
+                <td>CNXHKH01</td>
+                <td>Trung bình</td>
+                <td><button class="free" onclick="exam_page('Tự do')">Tự Do</button></td>
+                <td>Giữa kỳ</td>
+            </tr>
+            <tr>
+                <td>csdl01</td>
+                <td>Bài luyện tập số 1</td>
+                <td>CSDL01</td>
+                <td>Dễ</td>
+                <td><button class="free" onclick="exam_page('Tự do')">Tự Do</button></td>
+                <td>Luyện tập</td>
+            </tr>
+            <tr>
+                <td>csdl01</td>
+                <td>Bài luyện tập số 2</td>
+                <td>CSDL01</td>
+                <td>Dễ</td>
+                <td><button class="qua" onclick="exam_page('Ngoài thời gian')">Hết hạn làm Bài</button></td>
+                <td>Luyện tập</td>
+            </tr>
+            <tr>
+                <td>csdl01</td>
+                <td>Bài luyện tập số 3</td>
+                <td>CSDL01</td>
+                <td>Dễ</td>
+                <td><button class="trong" onclick="exam_page('Trong thời gian')">Đang diễn ra</button></td>
+                <td>Luyện tập</td>
+            </tr>
+            <tr>
+                <td>csdl01</td>
+                <td>Bài luyện tập số 4</td>
+                <td>CSDL01</td>
+                <td>Dễ</td>
+                <td><button class="sap" onclick="exam_page('sắp đến hạn')">05/06/2024</button></td>
+                <td>Luyện tập</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script src="../js/dashboard.js"></script>
+</body>
+
+</html>

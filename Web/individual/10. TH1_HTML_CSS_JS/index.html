@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Nhập thông tin </title>
+    <link rel="stylesheet" href="index.css"> 
+</head>
+<body>
+    <div class="main">
+        <form class="form" action="">
+            <h1 style="margin-bottom: 30px"> Nhập thông tin </h1>
+
+            <div class="form-element">
+                <label for="fullname"> Họ và tên </label>
+                <input id="fullname" type="text" required placeholder="Nhập họ và tên"/>
+            </div>
+
+            <div class="form-element">
+                <label for="date"> Ngày sinh </label>
+                <input id="date" type="date" required/>
+            </div>
+
+            <div class="form-element">
+                <label for="id"> Căn cước công dân </label>
+                <input id="id" type="text" required placeholder="Nhập CCCD"/>
+            </div>
+
+            <div class="form-element">
+                <label for="address"> Địa chỉ thường trú </label>
+                <input id="address" type="text" required placeholder="Nhập địa chỉ"/>
+            </div>
+
+            <button class="form-submit"> Vào khảo sát </button>
+        </form>
+    </div>
+</body>
+<script>
+    var formElement = document.querySelector(".form")
+    formElement.addEventListener('submit', (e) => {
+        e.preventDefault()
+        var name = document.querySelector("#fullname").value
+        localStorage.setItem('user', JSON.stringify(name))
+        location.href = 'exam.html'
+    })
+</script>    
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styletrangthi.css">
+    <title>Bài Thi</title>
+</head>
+<body>
+    <h1 id="monthi">Bài thi môn Chủ Nghĩa Khoa Học Xã Hội</h1>
+    <div id="quiz-container">
+        <h2 id="question">Câu hỏi 1: Đây là câu hỏi số một?</h2>
+        <div id="choices1">
+            <label><input type="radio" name="choice1" value="A"> A. Lựa chọn A</label>
+            <label><input type="radio" name="choice1" value="B"> B. Lựa chọn B</label>
+            <label><input type="radio" name="choice1" value="C"> C. Lựa chọn C</label>
+        </div>
+
+     <div id="quiz-container">
+        <h2 id="question">Câu hỏi 2: Đây là câu hỏi số hai?</h2>
+        <div id="choices2">
+            <label><input type="radio" name="choice2" value="A"> A. Lựa chọn A</label>
+            <label><input type="radio" name="choice2" value="B"> B. Lựa chọn B</label>
+            <label><input type="radio" name="choice2" value="C"> C. Lựa chọn C</label>
+        </div>
+
+     <div id="quiz-container">
+        <h2 id="question">Câu hỏi 3: Đây là câu hỏi số ba?</h2>
+        <div id="choices3">
+            <label><input type="radio" name="choice3" value="A"> A. Lựa chọn A</label>
+            <label><input type="radio" name="choice3" value="B"> B. Lựa chọn B</label>
+            <label><input type="radio" name="choice3" value="C"> C. Lựa chọn C</label>
+        </div>
+
+     <div id="quiz-container">
+        <h2 id="question">Câu hỏi 4: Đây là câu hỏi số bốn?</h2>
+        <div id="choices4">
+            <label><input type="radio" name="choice4" value="A"> A. Lựa chọn A</label>
+            <label><input type="radio" name="choice4" value="B"> B. Lựa chọn B</label>
+            <label><input type="radio" name="choice4" value="C"> C. Lựa chọn C</label>
+        </div>
+
+     <div id="quiz-container">
+        <h2 id="question">Câu hỏi 5: Đây là câu hỏi số năm?</h2>
+        <div id="choices5">
+            <label><input type="radio" name="choice5" value="A"> A. Lựa chọn A</label>
+            <label><input type="radio" name="choice5" value="B"> B. Lựa chọn B</label>
+            <label><input type="radio" name="choice5" value="C"> C. Lựa chọn C</label>
+        </div>
+
+    <div id="timer">Thời gian còn lại: <span id="countdown">00:10</span></div>
+    
+    <button id="submit-btn" onclick="submitQuiz()">Nộp bài</button>
+
+    <div id="result"></div>
+
+    <div id="result-btn-container">
+        <button id="result-btn" onclick="viewResult()" href="result.html">Xem Kết Quả</button>
+    </div>
+
+    <script src="../js/trangthi.js"></script>
+
+</body>
+</html>

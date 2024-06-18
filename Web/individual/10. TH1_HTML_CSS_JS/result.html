@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Kết quả </title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<style>
+    .form {
+        max-height: 55vh;
+        min-width: 50vw;
+    }
+</style>
+<body>
+    <div class="main"> 
+        <div class="form">
+            <h1 style="margin: 10px 15px;">
+                Bạn đã hoàn thành khảo sát !
+            </h1>
+            <div class="result-detail">
+                <p style="margin: 20px;">
+                </p>
+                <h2> Kết quả: 40/40 </h2>
+                <h2> Thời gian làm bài: 49 phút 59 giây </h2>
+                <button class="form-submit"> Thoát </button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        var namePara = document.getElementsByTagName('p')[0]
+        console.log(namePara)
+        namePara.innerHTML = `Họ và tên: ${JSON.parse(localStorage.getItem('user'))}`
+    })
+
+    const btnBack = document.querySelector('.form-submit')
+    btnBack.addEventListener('click', () => {
+        location.href = 'index.html'
+    })
+</script>
+</html>

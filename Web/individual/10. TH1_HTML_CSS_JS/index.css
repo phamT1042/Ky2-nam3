@@ -1,0 +1,65 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.main {
+    background-color: brown;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    width: 360px;
+    padding: 32px 24px;
+    text-align: center;
+    border-radius: 2px;
+    margin: 24px;
+    background-color: #fff;
+    box-shadow: 5px 10px 8px #888888;
+}
+
+.form-element {
+    display: flex;
+    margin-bottom: 16px;
+    flex-direction: column;
+}
+
+label {
+    text-align: left;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+input {
+    padding: 5px 10px;
+    margin: 8px 0;
+}
+
+input:hover {
+    border-color: #d7e1e2;
+}
+
+textarea {
+    margin: 3px ;
+    padding: 5px 5px;
+}
+
+.form-submit {
+    margin-top: 12px;
+    padding: 12px 16px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #ad171c;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.form-submit:hover {
+    background-color: brown;
+}

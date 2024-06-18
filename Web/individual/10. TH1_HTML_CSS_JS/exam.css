@@ -1,0 +1,21 @@
+.form {
+    width: 80vw;
+}
+
+.question {
+    margin-top: 12px;
+    text-align: left;
+}
+
+input {
+    margin-top: 12px
+}
+
+.answer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+

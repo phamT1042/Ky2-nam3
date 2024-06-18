@@ -1,0 +1,13 @@
+- Nikto v2.5.0
+---------------------------------------------------------------------------
++ Target IP:          203.162.88.119
++ Target Hostname:    code.ptit.edu.vn
++ Target Port:        80
++ Start Time:         2024-04-29 00:43:50 (GMT-4)
+---------------------------------------------------------------------------
++ Server: No banner retrieved
++ Root page / redirects to: https://code.ptit.edu.vn/
++ Scan terminated: 0 error(s) and 0 item(s) reported on remote host
++ End Time:           2024-04-29 00:44:51 (GMT-4) (61 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested

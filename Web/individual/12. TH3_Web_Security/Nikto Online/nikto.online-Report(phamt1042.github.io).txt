@@ -1,0 +1,22 @@
+- Nikto v2.5.0
+---------------------------------------------------------------------------
++ Multiple IPs found: 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153, 2606:50c0:8000::153, 2606:50c0:8003::153, 2606:50c0:8001::153, 2606:50c0:8002::153
++ Target IP:          185.199.108.153
++ Target Hostname:    phamt1042.github.io
++ Target Port:        80
++ Start Time:         2024-04-29 00:42:49 (GMT-4)
+---------------------------------------------------------------------------
++ Server: GitHub.com
++ /: Retrieved via header: 1.1 varnish.
++ /: Retrieved x-served-by header: cache-lga21940-LGA.
++ /: Fastly CDN was identified by the x-timer header. See: https://www.fastly.com/
++ /: Uncommon header 'x-fastly-request-id' found, with contents: 1fcee7dc198ac70e051ec262d4d9819e9845a51e.
++ /: Uncommon header 'x-served-by' found, with contents: cache-lga21940-LGA.
++ /: Uncommon header 'x-github-request-id' found, with contents: 0A6B:16C2:1861CD5:1B3D8C7:662F2549.
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ /favicons/favicon.png: Uncommon header 'x-origin-cache' found, with contents: HIT.
++ : Server banner changed from 'GitHub.com' to 'Varnish'.
++ Scan terminated: 0 error(s) and 8 item(s) reported on remote host
++ End Time:           2024-04-29 00:43:50 (GMT-4) (61 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
